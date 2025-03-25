@@ -2,6 +2,49 @@
 
 아무거나 끄적임
 
+## Day2
+
+RAG(Retrieval Augmented Generation)
+
+> 기술은 왜 쓰고 언제 쓰는지 아는 것이 중요
+
+- RAG는 검색을 통해 정보를 가져와서 생성하는 모델
+- 민감한 개인정보를 다루는 경우, RAG를 통해 검색을 통해 정보를 가져오는 것이 좋음
+- 임베딩도 파인튜닝이 필요함 (유사도 계산을 위해, ex 윤석렬 과 계엄)
+
+LangChain
+- 웹페이지를 긁어오는 등등의 로더들을 제공
+  - WebBasedLoader
+  - PDFLoader
+
+RAG Splitter
+- 한 문단이 이상적으로 판단될 경우, 두 세 문단으로 테스트 해보고,
+- 조금씩 줄여나가면서 테스트 해보는 것이 좋음
+
+Vector Store
+- 검색을 위한 벡터 저장소
+- KNN: K-Nearest Neighbors
+  - 유사도를 계산하여 가장 가까운 벡터를 찾아냄
+- ANN: Approximate Nearest Neighbors
+  - 유사도를 계산하여 가장 가까운 벡터를 찾아냄
+  - ANN은 KNN보다 빠르지만, 정확도가 떨어짐
+  - 1등(=최고) 을 찾아줄 필요가 없을 때 사용
+- 시멘틱
+  - 반대는 '키워드' 서치 (대부분 BM25 를 사용) 
+  - cf SQL
+  - 하이브리드 형태로 사용 (pgVector)
+
+프롬프트 작성 방법
+- Edge 케이스의 테스트 케이스를 준비
+- 프롬프트를 작성하고, 테스트 케이스를 통과하는지 확인
+
+HyDE
+- Q 에 대한 LLM 의 A 를 생성
+- 위 A 를 임베딩해서 그 근처 데이터를 Retrie 하는 것
+- 잘 되지만 비싸다
+
+> '정의' 와 '쓰임'과 '특징'을 알려줘
+
 ## Day1
 Deep Learning to LLM
 
