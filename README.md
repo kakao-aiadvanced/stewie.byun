@@ -2,6 +2,15 @@
 
 아무거나 끄적임
 
+## Day3
+
+Benchmarks
+- 어뷰징의 가능성이 있음
+- MMLU: Multiple-chice questions in 57 subjects
+  - 80% 후반 모델을 선택 
+- 'Golden Dataset 으로 테스트' 하는 것이 좋음
+
+
 ## Day2
 
 RAG(Retrieval Augmented Generation)
